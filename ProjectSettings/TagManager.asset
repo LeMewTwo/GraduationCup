@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Wall
   - Bullet
+  - EnemyBullet
   - Enemy
   layers:
   - Default
@@ -20,7 +21,7 @@ TagManager:
   - Wall
   - Bullet
   - Enemy
-  - 
+  - EnemyBullet
   - 
   - 
   - 
