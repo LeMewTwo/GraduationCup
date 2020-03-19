@@ -8,11 +8,12 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1862865510174575709}
+  - component: {fileID: 8421560715974442840}
   - component: {fileID: 2257327368655867039}
   - component: {fileID: -5613469964873804729}
   - component: {fileID: 6814593164943174596}
   - component: {fileID: 5882650472850195634}
+  - component: {fileID: 427691593753832701}
   m_Layer: 12
   m_Name: EnemyBullet
   m_TagString: EnemyBullet
@@ -20,8 +21,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1862865510174575709
-Transform:
+--- !u!224 &8421560715974442840
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -34,6 +35,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 1.543, y: -4.932}
+  m_SizeDelta: {x: -4.649, y: 3.359}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &2257327368655867039
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -73,12 +79,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 60e1b90f787d3442b8f3510d0f4e8038, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 00b48c4694b0ae54389fb6fe0a42c76c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 7.92, y: 11.2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -135,8 +141,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
+    oldSize: {x: 7.95, y: 11.23}
+    newSize: {x: 7.92, y: 11.2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -144,3 +150,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!222 &427691593753832701
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3615684518739039859}
+  m_CullTransparentMesh: 0

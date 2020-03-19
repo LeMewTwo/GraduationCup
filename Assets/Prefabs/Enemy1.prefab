@@ -145,8 +145,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   rigidBody: {fileID: 0}
-  startingImage: {fileID: 0}
-  secBeforeSpriteChange: 0.5
   enemyBullet: {fileID: 0}
   minFireRateTime: 1
   maxFireRateTime: 3

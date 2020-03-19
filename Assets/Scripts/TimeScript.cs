@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class TimeScript : MonoBehaviour
@@ -20,13 +18,13 @@ public class TimeScript : MonoBehaviour
     public void UpdateTimerUI()
     {
         secondCount += Time.deltaTime;
-        timerText.text = minuteCount +"m:" + (int)secondCount + "s";
-        if(secondCount >= 60)
+        timerText.text = minuteCount + "m:" + (int)secondCount + "s";
+        if (secondCount >= 60)
         {
             minuteCount++;
             secondCount = 0;
         }
-        else if(minuteCount >= 60)
+        else if (minuteCount >= 60)
         {
             minuteCount = 0;
         }

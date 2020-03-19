@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class Bullet : MonoBehaviour
@@ -24,13 +22,13 @@ public class Bullet : MonoBehaviour
     void OnTriggerEnter2D(Collider2D col)
     {
         //if bullet hits a wall then it destroy the bullet
-        if(col.tag == "Wall")
+        if (col.tag == "Wall")
         {
             Destroy(gameObject);
         }
 
         //if bullet hits enemy, then increase score and destroy bullet and enemy
-        if(col.tag == "Enemy")
+        if (col.tag == "Enemy")
         {
             SoundManager.Instance.PlayOneShot(SoundManager.Instance.enemyDies);
 
