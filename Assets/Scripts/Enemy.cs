@@ -17,13 +17,22 @@ public class Enemy : MonoBehaviour
     public float maxFireRateTime = 3.0f;
     public float baseFireWaitTime = 3.0f;
 
+    public static System.Random rand = new System.Random();
+
     // Start is called before the first frame update
     void Start()
     {
         rigidBody = GetComponent<Rigidbody2D>();
 
-        //starting direction and speed
-        rigidBody.velocity = new Vector2(1,0) * speed;
+        //random starting direction and speed
+        if (rand.Next(0, 2) == 0)
+        {
+            rigidBody.velocity = new Vector2(1, 0) * speed;
+        }
+        else
+        {
+            rigidBody.velocity = new Vector2(-1, 0) * speed;
+        }
 
         //random fire wait time for each enemy
         baseFireWaitTime = baseFireWaitTime + Random.Range(minFireRateTime, maxFireRateTime);
