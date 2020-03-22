@@ -14,8 +14,8 @@ public class Enemy : MonoBehaviour
 
     //min, max, base firing rate time for bullets
     public float minFireRateTime = 1.0f;
-    public float maxFireRateTime = 3.0f;
-    public float baseFireWaitTime = 3.0f;
+    public float maxFireRateTime = 2.0f;
+    public float baseFireWaitTime = 2.0f;
 
     public static System.Random rand = new System.Random();
 
