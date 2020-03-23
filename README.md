@@ -1,15 +1,18 @@
 # GraduationCup
 For first-time user:
+
 •	git clone link 
 
 Before you start working: 
 
 //to update your local repo
+
 •	git fetch 		//check for updates in github
 
 git pull			//get the updates in github 
 
 //create a new branch for each feature/task
+
 •	git checkout -b branch-name
 
 After completing your work:
