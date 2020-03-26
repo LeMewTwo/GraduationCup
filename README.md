@@ -1,3 +1,16 @@
+Compilation Instructions:
+-Download unity version 2019.3.6f1 or higher
+-Click on Clone or Download
+-In powershell(for windows): git clone <clone link>
+-Go to your downloaded GraduationCup folder
+-Open powershell there and 
+-git checkout -b branch_name (never work from master branch)
+-Open unity and open GraduationCup folder
+-Go to Assets-> Show in explorer->Assets-> Assets-Main Menu->Scenes->Menu.unity
+-Hit play on unity
+
+
+Github helpful instructions:
 # GraduationCup
 For first-time user:
 
