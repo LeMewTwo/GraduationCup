@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class EnemyBullet : MonoBehaviour
 {
@@ -36,11 +38,33 @@ public class EnemyBullet : MonoBehaviour
             SoundManager.Instance.PlayOneShot(SoundManager.Instance.playerDies);
 
             //Destroy the player
-            Destroy(col.gameObject);
+            //Destroy(col.gameObject);
+            //Decrease Score by 10
+            DecreaseScoreText();
 
             //Destroy the bullet
             Destroy(gameObject);
 
+        }
+    }
+
+    //decreased the score in the text UI when called
+    void DecreaseScoreText()
+    {
+        //find the text Score UI component
+        var scoreTextComp = GameObject.Find("Score").GetComponent<Text>();
+
+        //get string store in the text and covert into a int
+        int score = int.Parse(scoreTextComp.text);
+
+        score -= 10;
+
+        //covert the int score back into a string to update the text UI
+        scoreTextComp.text = score.ToString();
+
+        if(score<0)
+        {
+            SceneManager.LoadScene(7);
         }
     }
 

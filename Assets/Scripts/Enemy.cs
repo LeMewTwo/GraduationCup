@@ -14,14 +14,17 @@ public class Enemy : MonoBehaviour
 
     //min, max, base firing rate time for bullets
     public float minFireRateTime = 1.0f;
-    public float maxFireRateTime = 2.0f;
+    public float maxFireRateTime = 3.0f;
     public float baseFireWaitTime = 2.0f;
+
+    private float instantiateTime = 0.0f;
 
     public static System.Random rand = new System.Random();
 
     // Start is called before the first frame update
     void Start()
     {
+        instantiateTime = Time.time;
         rigidBody = GetComponent<Rigidbody2D>();
 
         //random starting direction and speed
@@ -51,7 +54,7 @@ public class Enemy : MonoBehaviour
     void MoveDown()
     {
         Vector2 position = transform.position;
-        position.y -= 1;
+        position.y -= 2;
         transform.position = position;
     }
 
@@ -81,12 +84,14 @@ public class Enemy : MonoBehaviour
     //enemys will fire bullets at random times
     void FixedUpdate()
     {
-        if(Time.time > baseFireWaitTime)
+        if((Time.time - instantiateTime )> baseFireWaitTime)
         {
             baseFireWaitTime = baseFireWaitTime + Random.Range(minFireRateTime, maxFireRateTime);
 
             Instantiate(enemyBullet, transform.position, Quaternion.identity);
+
         }
+       
     }
 
     //if the enemy ever collides with the player they both will be destroyed

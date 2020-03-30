@@ -1,7 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
- 
+
+
 public class Player : MonoBehaviour
 {
     //base bullet speed
@@ -32,4 +33,5 @@ public class Player : MonoBehaviour
             SoundManager.Instance.PlayOneShot(SoundManager.Instance.bulletFire);
         }
     }
+    
 }

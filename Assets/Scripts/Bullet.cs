@@ -38,6 +38,8 @@ public class Bullet : MonoBehaviour
 
             Destroy(col.gameObject, 0);
         }
+
+
     }
 
     //when bullet isn't used will call this and make invisible
@@ -55,7 +57,7 @@ public class Bullet : MonoBehaviour
         //get string store in the text and covert into a int
         int score = int.Parse(scoreTextComp.text);
 
-        score += 25;
+        score += 5;
 
         //covert the int score back into a string to update the text UI
         scoreTextComp.text = score.ToString();
