@@ -419,9 +419,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: 7ee2f46997e697c4f9df6452337101d9, type: 3}
-        m_MethodName: 
-        m_Mode: 5
+      - m_Target: {fileID: 2144469813}
+        m_MethodName: GoMenu
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -823,12 +823,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 102900000, guid: 74e5112909761478692a6e70cf7e5ef3, type: 3}
-        m_MethodName: 
+      - m_Target: {fileID: 2144469813}
+        m_MethodName: PlayAgain
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1043,6 +1043,7 @@ GameObject:
   - component: {fileID: 2144469812}
   - component: {fileID: 2144469811}
   - component: {fileID: 2144469810}
+  - component: {fileID: 2144469813}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -1132,3 +1133,15 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &2144469813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2144469808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ee2f46997e697c4f9df6452337101d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
