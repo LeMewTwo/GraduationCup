@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class EnemyManager : MonoBehaviour
 {
     [SerializeField]
-    private int numberOfEnemies = 10;
+    //private int numberOfEnemies = 10;
     private int nextEnemy = 0;
     private bool waiting = false;
 
