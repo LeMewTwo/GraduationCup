@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Enemy : MonoBehaviour
 {
@@ -11,15 +12,24 @@ public class Enemy : MonoBehaviour
 
     //reference to enemyBullet GameObject
     public GameObject enemyBullet;
+    public GameObject Books;
+    private int hit = 0;
 
     //min, max, base firing rate time for bullets
     public float minFireRateTime = 1.0f;
     public float maxFireRateTime = 3.0f;
     public float baseFireWaitTime = 2.0f;
 
+    public float minFireBookRateTime = 2.0f;
+    public float maxFireBookRateTime = 10.0f;
+    public float baseFireBookWaitTime = 6.0f;
+
+
     private float instantiateTime = 0.0f;
 
     public static System.Random rand = new System.Random();
+
+    public EnemyManager enemyManager;
 
     // Start is called before the first frame update
     void Start()
@@ -39,6 +49,7 @@ public class Enemy : MonoBehaviour
 
         //random fire wait time for each enemy
         baseFireWaitTime = baseFireWaitTime + Random.Range(minFireRateTime, maxFireRateTime);
+        baseFireBookWaitTime = baseFireBookWaitTime + Random.Range(minFireBookRateTime, maxFireBookRateTime);
 
     }
 
@@ -73,12 +84,22 @@ public class Enemy : MonoBehaviour
             MoveDown();
         }
 
-        if(col.gameObject.tag == "Bullet")
-        {
-            SoundManager.Instance.PlayOneShot(SoundManager.Instance.enemyDies);
-            Destroy(gameObject);
-        }
+    }
 
+    public void Die()
+    {
+        //destroy bullet
+        hit++;
+        if (hit == 3)
+        {
+            enemyManager.totalEnemiesKilled++;
+            enemyManager.SetTimer(9.0f);
+            Destroy(gameObject);
+            if (enemyManager.totalEnemiesKilled == 9)
+            {
+                enemyManager.nextLevel();
+            }
+        }
     }
 
     //enemys will fire bullets at random times
@@ -91,7 +112,17 @@ public class Enemy : MonoBehaviour
             Instantiate(enemyBullet, transform.position, Quaternion.identity);
 
         }
-       
+
+        if ((Time.time - instantiateTime) > baseFireBookWaitTime)
+        {
+            baseFireBookWaitTime = baseFireBookWaitTime + Random.Range(minFireBookRateTime, maxFireBookRateTime);
+
+            Instantiate(Books, transform.position, Quaternion.identity);
+            enemyManager.totalScore+=5;
+
+        }
+
+
     }
 
     //if the enemy ever collides with the player they both will be destroyed
@@ -106,4 +137,5 @@ public class Enemy : MonoBehaviour
             Destroy(col.gameObject);
         }
     }
+
 }

@@ -8,6 +8,7 @@ public class Bullet : MonoBehaviour
     //private int counter = 0;
     private Rigidbody2D rigidBody;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +30,18 @@ public class Bullet : MonoBehaviour
 
         //if bullet hits enemy, then increase score and destroy bullet and enemy
         if (col.tag == "Enemy")
+        {
+            SoundManager.Instance.PlayOneShot(SoundManager.Instance.enemyDies);
+
+            IncreaseScoreText();
+
+            Destroy(gameObject);
+
+            col.gameObject.GetComponent<Enemy>().Die();
+
+        }
+
+        if (col.tag == "Books")
         {
             SoundManager.Instance.PlayOneShot(SoundManager.Instance.enemyDies);
 

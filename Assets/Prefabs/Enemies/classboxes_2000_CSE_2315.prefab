@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7442435461177009249}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.3, y: 29.3, z: 53.76552}
+  m_LocalPosition: {x: 1.3, y: 21.3, z: 53.76552}
   m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -147,6 +147,11 @@ MonoBehaviour:
   rigidBody: {fileID: 0}
   enemyBullet: {fileID: 3615684518739039859, guid: b293f6c6bd5db4d1bb39408ce726cac1,
     type: 3}
+  Books: {fileID: 2328350597741843668, guid: dc8417103bc898542a0673678bfa3569, type: 3}
   minFireRateTime: 1
   maxFireRateTime: 3
   baseFireWaitTime: 3
+  minFireBookRateTime: 3
+  maxFireBookRateTime: 7
+  baseFireBookWaitTime: 4
+  enemyManager: {fileID: 0}
