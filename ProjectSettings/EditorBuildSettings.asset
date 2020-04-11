@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PlayerDied.unity
     guid: 45531b4ebe20cf64c87b42ddaa6bca9c
+  - enabled: 1
+    path: Assets/Scenes/LessGPA.unity
+    guid: 1df8331548f2aac40a6168401505324b
   m_configObjects: {}

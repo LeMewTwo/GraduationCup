@@ -4,34 +4,34 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class EnemyBullet : MonoBehaviour
+public class Books : MonoBehaviour
 {
 
     private Rigidbody2D rigidBody;
 
-    //speed for the bullet
-    public float speed = 30;
+    //speed for the book
+    public float speed = 10;
 
     // Start is called before the first frame update
     void Start()
     {
-        //get reference to Rigidbody for the bullet
+        //get reference to Rigidbody for the book
         rigidBody = GetComponent<Rigidbody2D>();
 
-        //when bullet is called it will go down at the speed
+        //when book is called it will go down at the speed
         rigidBody.velocity = Vector2.down * speed;
     }
 
-    //when bullet hits something will call, object hit is passed as a parameter
+    //when book hits something will call, object hit is passed as a parameter
     void OnTriggerEnter2D(Collider2D col)
     {
-        //if enemyBullet hits a wall it will destroy the bullet
+        //if Book hits a wall it will destroy the book
         if(col.tag == "Wall")
         {
             Destroy(gameObject);
         }
 
-        //if bullet hits player then destroy enemyBullet and decrease score
+        //if book hits player then destroy book and reduce score
         if(col.gameObject.tag == "Player")
         {
             //Play sound when player hit
@@ -57,7 +57,7 @@ public class EnemyBullet : MonoBehaviour
         //get string store in the text and covert into a int
         int score = int.Parse(scoreTextComp.text);
 
-        score -= 5;
+        score -= 10;
 
         //covert the int score back into a string to update the text UI
         scoreTextComp.text = score.ToString();
@@ -68,7 +68,7 @@ public class EnemyBullet : MonoBehaviour
         }
     }
 
-    //when bullet isn't used will call this and make invisible
+    //when book isn't used will call this and make invisible
     void OnBecomeInvisible()
     {
         Destroy(gameObject);

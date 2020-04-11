@@ -8,6 +8,7 @@ TagManager:
   - Bullet
   - EnemyBullet
   - Enemy
+  - Books
   layers:
   - Default
   - TransparentFX
@@ -22,7 +23,7 @@ TagManager:
   - Bullet
   - Enemy
   - EnemyBullet
-  - 
+  - Books
   - 
   - 
   - 

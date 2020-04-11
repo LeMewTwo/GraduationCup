@@ -37,7 +37,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -10.1, y: 24.7}
+  m_AnchoredPosition: {x: -10.1, y: 21.7}
   m_SizeDelta: {x: 16, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &3835331594493121188
@@ -161,6 +161,11 @@ MonoBehaviour:
   rigidBody: {fileID: 0}
   enemyBullet: {fileID: 3615684518739039859, guid: b293f6c6bd5db4d1bb39408ce726cac1,
     type: 3}
+  Books: {fileID: 2328350597741843668, guid: dc8417103bc898542a0673678bfa3569, type: 3}
   minFireRateTime: 1
   maxFireRateTime: 3
   baseFireWaitTime: 3
+  minFireBookRateTime: 3
+  maxFireBookRateTime: 7
+  baseFireBookWaitTime: 4
+  enemyManager: {fileID: 0}

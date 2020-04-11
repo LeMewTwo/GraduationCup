@@ -161,6 +161,7 @@ MonoBehaviour:
   rigidBody: {fileID: 0}
   enemyBullet: {fileID: 3615684518739039859, guid: b293f6c6bd5db4d1bb39408ce726cac1,
     type: 3}
+  Books: {fileID: 2328350597741843668, guid: dc8417103bc898542a0673678bfa3569, type: 3}
   minFireRateTime: 1
   maxFireRateTime: 3
   baseFireWaitTime: 3
