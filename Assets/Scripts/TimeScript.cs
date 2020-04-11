@@ -3,7 +3,6 @@ using UnityEngine.UI;
 
 public class TimeScript : MonoBehaviour
 {
-
     public Text timerText;
 
     private float secondCount;
