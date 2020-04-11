@@ -57,7 +57,7 @@ public class EnemyBullet : MonoBehaviour
         //get string store in the text and covert into a int
         int score = int.Parse(scoreTextComp.text);
 
-        score -= 5;
+        score -= 20;
 
         //covert the int score back into a string to update the text UI
         scoreTextComp.text = score.ToString();

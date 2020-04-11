@@ -17,7 +17,7 @@ public class EnemyManager : MonoBehaviour
 
     public int totalScore = 0;
 
-    public int percentage;
+    public double percentage;
     public int GPA;
 
     // Start is called before the first frame update
@@ -93,16 +93,17 @@ public class EnemyManager : MonoBehaviour
         int score = int.Parse(scoreTextComp.text);
 
         //calculate percentage
-        percentage = (score / totalScore) * 100;
-        if(percentage>=85)
+        percentage = ((score*1.0f) / totalScore) * 100.0f;
+        Debug.Log(percentage);
+        if(percentage>=90)
         {
             GPA = 4;
         }
-        else if (percentage >= 70)
+        else if (percentage >= 80)
         {
             GPA = 3;
         }
-        else if (percentage >= 55)
+        else if (percentage >= 70)
         {
             GPA = 2;
         }

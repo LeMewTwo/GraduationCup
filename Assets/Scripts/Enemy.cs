@@ -20,8 +20,8 @@ public class Enemy : MonoBehaviour
     public float maxFireRateTime = 3.0f;
     public float baseFireWaitTime = 2.0f;
 
-    public float minFireBookRateTime = 4.0f;
-    public float maxFireBookRateTime = 8.0f;
+    public float minFireBookRateTime = 2.0f;
+    public float maxFireBookRateTime = 10.0f;
     public float baseFireBookWaitTime = 6.0f;
 
 
