@@ -11,6 +11,7 @@ public class EnemyBullet : MonoBehaviour
 
     //speed for the bullet
     public float speed = 30;
+    public PlayerDied playerdied;
 
     // Start is called before the first frame update
     void Start()

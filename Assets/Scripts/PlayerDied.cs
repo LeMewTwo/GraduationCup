@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerDied : MonoBehaviour
 {
+
     //loads Game screen when play Again button is pressed
     public void PlayAgain()
     {

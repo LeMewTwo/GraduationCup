@@ -373,6 +373,7 @@ MonoBehaviour:
   timer: 0
   totalScore: 0
   percentage: 0
+  GPA: 0
 --- !u!1 &235006498
 GameObject:
   m_ObjectHideFlags: 0
