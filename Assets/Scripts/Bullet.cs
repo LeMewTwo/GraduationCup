@@ -5,7 +5,7 @@ public class Bullet : MonoBehaviour
 {
     //base speed for bullet
     public float speed = 30;
-
+    //private int counter = 0;
     private Rigidbody2D rigidBody;
 
     // Start is called before the first frame update
@@ -53,7 +53,7 @@ public class Bullet : MonoBehaviour
     {
         //find the text Score UI component
         var scoreTextComp = GameObject.Find("Score").GetComponent<Text>();
-
+       
         //get string store in the text and covert into a int
         int score = int.Parse(scoreTextComp.text);
 
