@@ -72,6 +72,8 @@ public class Bullet : MonoBehaviour
 
         score += 5;
 
+        GameManager.instance.score += 5;
+
         //covert the int score back into a string to update the text UI
         scoreTextComp.text = score.ToString();
     }
