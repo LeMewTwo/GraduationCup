@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System;
 
 public class EnemyManager : MonoBehaviour
 {
@@ -17,8 +18,7 @@ public class EnemyManager : MonoBehaviour
 
     public int totalScore = 0;
 
-    public double percentage;
-    public int GPA;
+    public float GPA;
 
     // Start is called before the first frame update
     void Start()
@@ -92,25 +92,10 @@ public class EnemyManager : MonoBehaviour
         //get string store in the text and covert into a int
         int score = int.Parse(scoreTextComp.text);
 
-        //calculate percentage
-        percentage = ((score*1.0f) / totalScore) * 100.0f;
-        Debug.Log(percentage);
-        if(percentage>=90)
-        {
-            GPA = 4;
-        }
-        else if (percentage >= 80)
-        {
-            GPA = 3;
-        }
-        else if (percentage >= 70)
-        {
-            GPA = 2;
-        }
-        else 
-        {
-            GPA = 1;
-        }
+        //calculate GPA
+        GPA = ((score*1.0f) / totalScore) * 4.0f;
+        GPA = (float)Math.Round(GPA * 100f) / 100f;
+        Debug.Log(GPA);
 
         if(GPA>=2)
         {

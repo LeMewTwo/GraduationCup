@@ -7,7 +7,7 @@ public class Bullet : MonoBehaviour
     public float speed = 30;
     //private int counter = 0;
     private Rigidbody2D rigidBody;
-
+    //public GameManager gamemanager;
 
     // Start is called before the first frame update
     void Start()
@@ -85,7 +85,7 @@ public class Bullet : MonoBehaviour
 
         score += 5;
 
-        GameManager.instance.score += 5;
+        //gamemanager.score += 5;
 
         //covert the int score back into a string to update the text UI
         scoreTextComp.text = score.ToString();

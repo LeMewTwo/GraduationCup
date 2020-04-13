@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
 
     public int score;
-    public string name;
+    public new string name;
     public InputField nameInput;
 
 
