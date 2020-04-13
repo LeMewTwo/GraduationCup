@@ -27,7 +27,7 @@ public class Player : MonoBehaviour
         {
             //creates a bullet at the players position which is transform.position
             //quaternion.identity will add bullets with no rotation
-            Instantiate(theBullet, transform.position, Quaternion.identity);
+            Instantiate(theBullet, transform.position, Quaternion.Euler(0,0,-135));
 
             //plays a bullet fire sound when bullet is created
             SoundManager.Instance.PlayOneShot(SoundManager.Instance.bulletFire);

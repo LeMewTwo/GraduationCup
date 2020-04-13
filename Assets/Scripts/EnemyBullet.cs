@@ -63,10 +63,10 @@ public class EnemyBullet : MonoBehaviour
         //covert the int score back into a string to update the text UI
         scoreTextComp.text = score.ToString();
 
-        if(score<0)
+        /*if(score<0)
         {
             SceneManager.LoadScene(7);
-        }
+        }*/
     }
 
     //when bullet isn't used will call this and make invisible

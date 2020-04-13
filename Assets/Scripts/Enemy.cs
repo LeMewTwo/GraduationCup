@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class Enemy : MonoBehaviour
@@ -53,6 +54,25 @@ public class Enemy : MonoBehaviour
 
     }
 
+    //on every update
+    void Update()
+    {
+        //find the text Score UI component
+        var scoreTextComp = GameObject.Find("Score").GetComponent<Text>();
+
+        //get string store in the text and covert into a int
+        int score = int.Parse(scoreTextComp.text);
+
+        //covert the int score back into a string to update the text UI
+        scoreTextComp.text = score.ToString();
+
+        if (score < 0)
+        {
+            SceneManager.LoadScene(7);
+        }
+
+    }
+
     //Turn in opposite direction for enemy object
     void Turn(int direction)
     {
@@ -82,6 +102,11 @@ public class Enemy : MonoBehaviour
         {
             Turn(1);
             MoveDown();
+        }
+
+        if (col.gameObject.name == "BottomWall")
+        {
+            Destroy(gameObject);
         }
 
     }

@@ -322,9 +322,9 @@ GameObject:
   m_Component:
   - component: {fileID: 231521960}
   - component: {fileID: 231521961}
-  m_Layer: 11
+  m_Layer: 14
   m_Name: Enemies
-  m_TagString: Enemy
+  m_TagString: Enemy2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -337,7 +337,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 231521959}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -451, y: 174, z: -53.76552}
+  m_LocalPosition: {x: -361, y: 201, z: -53.76552}
   m_LocalScale: {x: 7.6923075, y: 7.6923075, z: 1}
   m_Children: []
   m_Father: {fileID: 2091925052}
@@ -352,22 +352,31 @@ MonoBehaviour:
   m_GameObject: {fileID: 231521959}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9700ea33aba25704898e376213b91cc3, type: 3}
+  m_Script: {fileID: 11500000, guid: ac2ef074a07d093419744be29b8e60ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   enemies:
-  - {fileID: 9106418387409347311, guid: 4abecba4ffdc50f4fba87f2c8db8f372, type: 3}
-  - {fileID: 9106418387409347311, guid: 38650801c969ae444b4b706cf37b33ee, type: 3}
-  - {fileID: 5139340128395591820, guid: eadc630f83b68a54ea0b8ede23e42446, type: 3}
-  - {fileID: 8727940869534606856, guid: 35059a47431ef1444b8fbaed469f73cc, type: 3}
-  - {fileID: 4245092531061457009, guid: 24e6442d3eff87d40afa3e39792ab4e3, type: 3}
-  - {fileID: 7280309143183199428, guid: 9308f2a6e55373a46b2216e25020a84c, type: 3}
-  - {fileID: 3835331594493121177, guid: 8091ea1c2ec41324fa845b0011e05169, type: 3}
-  - {fileID: 1878381250786473522, guid: 04e2680ee2e21ae4b87e53c15185672c, type: 3}
-  - {fileID: 7442435461177009249, guid: f6704aabe65e9d443964a9017a793825, type: 3}
-  - {fileID: 5440040662986690993, guid: 86cc41db8ca6a304aa554cfa654fb1c5, type: 3}
-  instantiatingPoint: {fileID: 3553779815013935788, guid: fc1dd59a6c0bea143b1a827d53ab3963,
-    type: 3}
+  - {fileID: 8208788081436142858, guid: 3ec8bbff6ec9c3240b68ac51e0e0f2fb, type: 3}
+  - {fileID: 5370216790177205049, guid: c7b643dd6b8ae3749b10eb6cc6771d9f, type: 3}
+  - {fileID: 1368579114978985023, guid: cc5780c911d78534d9fc8464def8aa61, type: 3}
+  - {fileID: 7450803277319849127, guid: 03360f68a55ca634183d416aa493e11e, type: 3}
+  - {fileID: 8313367220421475456, guid: c048a87210b10f64eaea52b1216f0bf2, type: 3}
+  - {fileID: 7312106076229316812, guid: a4aea67436018d149b16ffff0854da08, type: 3}
+  - {fileID: 2041090679711118117, guid: f0b194a65d5113b4bae86e50a8aa4557, type: 3}
+  - {fileID: 8126807619411349622, guid: 82257715e9c2c2e49896ad4a2676ca93, type: 3}
+  - {fileID: 6158735719664612259, guid: f1ce6ee792e7bfa4cb0a75e43ea3fb30, type: 3}
+  - {fileID: 1973634295429708557, guid: 4ec22c7a48f16bd469e419f79f3600bb, type: 3}
+  instantiatingPoint:
+  - {fileID: 3553779815013935788, guid: fc1dd59a6c0bea143b1a827d53ab3963, type: 3}
+  - {fileID: 3553779815013935788, guid: 05d47efd6275c294d8b35e56de70b680, type: 3}
+  - {fileID: 3553779815013935788, guid: b6a2fcaaa1f4ec946b1c72d006cdcf25, type: 3}
+  - {fileID: 3553779815013935788, guid: 539df225f09e9304bbdd7fa8ca2694cf, type: 3}
+  - {fileID: 3553779815013935788, guid: 3735b18bcf2d6d94280ef40b03976e92, type: 3}
+  - {fileID: 3553779815013935788, guid: d1653e8e1cc811440a2a0f5b7c5598e0, type: 3}
+  - {fileID: 3553779815013935788, guid: 2d3f1fbc51104eb439ea8b64ef9f3ef5, type: 3}
+  - {fileID: 3553779815013935788, guid: 10362c5f1a743df48832141ff69ef1a2, type: 3}
+  - {fileID: 3553779815013935788, guid: 81e4336020f949a499c246421bc70626, type: 3}
+  - {fileID: 3553779815013935788, guid: 4682ad12303fdb84395c7f1a70e55c89, type: 3}
   totalEnemies: 9
   totalEnemiesKilled: 0
   timer: 0
@@ -824,8 +833,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -23.5, y: -51}
-  m_SizeDelta: {x: 115.1, y: 75.4}
+  m_AnchoredPosition: {x: -22.2, y: -51}
+  m_SizeDelta: {x: 114.8, y: 75.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &519420028
 GameObject:
@@ -1268,8 +1277,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 537.57, y: -306.3}
-  m_SizeDelta: {x: 215.8, y: 75.1}
+  m_AnchoredPosition: {x: 537.57, y: -302}
+  m_SizeDelta: {x: 215.8, y: 83.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &747396223
 MonoBehaviour:
@@ -1306,7 +1315,10 @@ MonoBehaviour:
 
     Left = a or Left arrow
 
-    Right = d or Right arrow'
+    Right = d or Right arrow
+
+    Esc
+    = Pause/Resume'
 --- !u!222 &747396224
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1578,7 +1590,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 525.52, y: -242.79999}
+  m_AnchoredPosition: {x: 525.52, y: -234.15}
   m_SizeDelta: {x: 191.7, y: 51.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1024189552
@@ -1612,7 +1624,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'HOW TO PLAY:'
+  m_Text: 'INSTRUCTIONS:'
 --- !u!222 &1024189553
 CanvasRenderer:
   m_ObjectHideFlags: 0

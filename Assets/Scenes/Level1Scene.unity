@@ -1268,8 +1268,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 537.57, y: -306.3}
-  m_SizeDelta: {x: 215.8, y: 75.1}
+  m_AnchoredPosition: {x: 537.57, y: -299.3}
+  m_SizeDelta: {x: 215.8, y: 89.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &747396223
 MonoBehaviour:
@@ -1306,7 +1306,10 @@ MonoBehaviour:
 
     Left = a or Left arrow
 
-    Right = d or Right arrow'
+    Right = d or Right arrow
+
+    Esc
+    = Pause/Resume'
 --- !u!222 &747396224
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1578,7 +1581,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 525.52, y: -242.79999}
+  m_AnchoredPosition: {x: 525.52, y: -228.79999}
   m_SizeDelta: {x: 191.7, y: 51.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1024189552
@@ -1612,7 +1615,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'HOW TO PLAY:'
+  m_Text: 'INSTRUCTIONS:'
 --- !u!222 &1024189553
 CanvasRenderer:
   m_ObjectHideFlags: 0

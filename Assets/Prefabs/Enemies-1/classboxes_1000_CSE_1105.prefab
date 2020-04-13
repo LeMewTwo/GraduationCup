@@ -165,3 +165,7 @@ MonoBehaviour:
   minFireRateTime: 1
   maxFireRateTime: 3
   baseFireWaitTime: 3
+  minFireBookRateTime: 2
+  maxFireBookRateTime: 10
+  baseFireBookWaitTime: 6
+  enemyManager: {fileID: 0}

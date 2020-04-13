@@ -27,12 +27,21 @@ EditorBuildSettings:
     path: Assets/Scenes/Level4Scene.unity
     guid: 20598899b45aebc4b994a53db44c8989
   - enabled: 1
-    path: Assets/Scenes/Next_Level.unity
+    path: Assets/Scenes/Next_Level1.unity
     guid: 92ac250be2dade5449d14c4b6c3ab5fc
   - enabled: 1
-    path: Assets/Scenes/PlayerDied.unity
+    path: Assets/Scenes/PlayerDied 1.unity
+    guid: a433c84841bfb4040afb7397511ce92b
+  - enabled: 1
+    path: Assets/Scenes/LessGPA1.unity
+    guid: 1df8331548f2aac40a6168401505324b
+  - enabled: 1
+    path: Assets/Scenes/Next_Level2.unity
+    guid: c460d3a5b5177404aa5eae1b7cd3e407
+  - enabled: 1
+    path: Assets/Scenes/PlayerDied2.unity
     guid: 45531b4ebe20cf64c87b42ddaa6bca9c
   - enabled: 1
-    path: Assets/Scenes/LessGPA.unity
-    guid: 1df8331548f2aac40a6168401505324b
+    path: Assets/Scenes/LessGPA2.unity
+    guid: 92bd25c079b439f45ad497eae7a41a61
   m_configObjects: {}
