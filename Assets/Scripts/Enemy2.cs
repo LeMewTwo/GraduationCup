@@ -110,7 +110,7 @@ public class Enemy2 : MonoBehaviour
             enemyManager2.totalEnemiesKilled++;
             enemyManager2.SetTimer(9.0f);
             Destroy(gameObject);
-            if (enemyManager2.totalEnemiesKilled == 9)
+            if (enemyManager2.totalEnemiesKilled == 10)
             {
                 enemyManager2.nextLevel();
             }
@@ -128,7 +128,7 @@ public class Enemy2 : MonoBehaviour
             enemyManager2.totalEnemiesKilled++;
             enemyManager2.SetTimer(9.0f);
             Destroy(gameObject);
-            if (enemyManager2.totalEnemiesKilled == 9)
+            if (enemyManager2.totalEnemiesKilled == 10)
             {
                 enemyManager2.nextLevel();
             }

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class Enemy : MonoBehaviour
+public class Enemy4 : MonoBehaviour
 {
     //base speed for enemy
     public float speed = 10;
@@ -30,7 +30,7 @@ public class Enemy : MonoBehaviour
 
     public static System.Random rand = new System.Random();
 
-    public EnemyManager enemyManager;
+    public EnemyManager4 enemyManager;
 
     // Start is called before the first frame update
     void Start()
@@ -106,8 +106,6 @@ public class Enemy : MonoBehaviour
 
         if (col.gameObject.name == "BottomWall")
         {
-            //Turn(1);
-            //MoveDown();
             enemyManager.totalEnemiesKilled++;
             enemyManager.SetTimer(9.0f);
             Destroy(gameObject);

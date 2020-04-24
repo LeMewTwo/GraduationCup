@@ -11,7 +11,7 @@ public class EnemyManager : MonoBehaviour
     public GameObject instantiatingPoint;
 
     private int totalEnemiesSpawned = 0;
-    public int totalEnemies = 9;
+    public int totalEnemies = 10;
     public int totalEnemiesKilled = 0;
 
     public float timer = 0.0f;
