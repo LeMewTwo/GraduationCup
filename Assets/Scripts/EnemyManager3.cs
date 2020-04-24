@@ -5,10 +5,10 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System;
 
-public class EnemyManager : MonoBehaviour
+public class EnemyManager3 : MonoBehaviour
 {
     public GameObject[] enemies;
-    public GameObject instantiatingPoint;
+    public GameObject[] instantiatingPoint;
 
     private int totalEnemiesSpawned = 0;
     public int totalEnemies = 10;
@@ -18,7 +18,7 @@ public class EnemyManager : MonoBehaviour
 
     public int totalScore = 0;
 
-    public float GPA;
+    public double GPA;
 
     // Start is called before the first frame update
     void Start()
@@ -72,14 +72,14 @@ public class EnemyManager : MonoBehaviour
 
         
         //spawn an enemy
-        GameObject enemy = Instantiate(
+        GameObject enemy3 = Instantiate(
             enemies[totalEnemiesSpawned],
-            instantiatingPoint.GetComponent<Transform>().position,
+            instantiatingPoint[totalEnemiesSpawned].GetComponent<Transform>().position,
             Quaternion.identity
         );
         //calculate total score 
-        totalScore += 15;
-        enemy.GetComponent<Enemy>().enemyManager = this;
+        totalScore += 30;
+        enemy3.GetComponent<Enemy3>().enemyManager = this;
         totalEnemiesSpawned++;
     }
     
@@ -93,17 +93,17 @@ public class EnemyManager : MonoBehaviour
         int score = int.Parse(scoreTextComp.text);
 
         //calculate GPA
-        GPA = ((score*1.0f) / totalScore) * 4.0f;
+        GPA = ((score*1.0f) / totalScore) * 100.0f;
         GPA = (float)Math.Round(GPA * 100f) / 100f;
         Debug.Log(GPA);
 
         if(GPA>=2)
         {
-            SceneManager.LoadScene(6);
+            SceneManager.LoadScene(9);
         }
         else
         {
-            SceneManager.LoadScene(8);
+            SceneManager.LoadScene(11);
         }
     }
 }

@@ -1,13 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
-public class Enemy : MonoBehaviour
+public class Enemy3 : MonoBehaviour
 {
     //base speed for enemy
-    public float speed = 10;
+    public float speed = 16;
 
     public Rigidbody2D rigidBody;
 
@@ -15,22 +15,22 @@ public class Enemy : MonoBehaviour
     public GameObject enemyBullet;
     public GameObject Books;
     private int hit = 0;
-
+    //public GameObject instantiatingPoint;
     //min, max, base firing rate time for bullets
     public float minFireRateTime = 1.0f;
-    public float maxFireRateTime = 3.0f;
-    public float baseFireWaitTime = 2.0f;
+    public float maxFireRateTime = 4.0f;
+    public float baseFireWaitTime = 1.0f;
 
-    public float minFireBookRateTime = 2.0f;
-    public float maxFireBookRateTime = 10.0f;
-    public float baseFireBookWaitTime = 6.0f;
+    public float minFireBookRateTime = 3.0f;
+    public float maxFireBookRateTime = 12.0f;
+    public float baseFireBookWaitTime;
 
 
     private float instantiateTime = 0.0f;
 
     public static System.Random rand = new System.Random();
 
-    public EnemyManager enemyManager;
+    public EnemyManager3 enemyManager;
 
     // Start is called before the first frame update
     void Start()
@@ -50,7 +50,7 @@ public class Enemy : MonoBehaviour
 
         //random fire wait time for each enemy
         baseFireWaitTime = baseFireWaitTime + Random.Range(minFireRateTime, maxFireRateTime);
-        baseFireBookWaitTime = baseFireBookWaitTime + Random.Range(minFireBookRateTime, maxFireBookRateTime);
+        baseFireBookWaitTime = Random.Range(minFireBookRateTime, maxFireBookRateTime);
 
     }
 
@@ -68,7 +68,7 @@ public class Enemy : MonoBehaviour
 
         if (score < 0)
         {
-            SceneManager.LoadScene(7);
+            SceneManager.LoadScene(10);
         }
 
     }
@@ -92,18 +92,17 @@ public class Enemy : MonoBehaviour
     //when enemy hits wall, it will switch direction and call movedown
     void OnCollisionEnter2D(Collision2D col)
     {
-        if(col.gameObject.name == "RightWall")
+        if (col.gameObject.name == "RightWall")
         {
             Turn(-1);
             MoveDown();
         }
 
-        if(col.gameObject.name == "LeftWall")
+        if (col.gameObject.name == "LeftWall")
         {
             Turn(1);
             MoveDown();
         }
-
         if (col.gameObject.name == "BottomWall")
         {
             //Turn(1);
@@ -117,13 +116,14 @@ public class Enemy : MonoBehaviour
             }
         }
 
+
     }
 
     public void Die()
     {
         //destroy bullet
         hit++;
-        if (hit == 3)
+        if (hit == 6)
         {
             enemyManager.totalEnemiesKilled++;
             enemyManager.SetTimer(9.0f);
@@ -138,7 +138,7 @@ public class Enemy : MonoBehaviour
     //enemys will fire bullets at random times
     void FixedUpdate()
     {
-        if((Time.time - instantiateTime )> baseFireWaitTime)
+        if ((Time.time - instantiateTime) > baseFireWaitTime)
         {
             baseFireWaitTime = baseFireWaitTime + Random.Range(minFireRateTime, maxFireRateTime);
 
@@ -151,7 +151,7 @@ public class Enemy : MonoBehaviour
             baseFireBookWaitTime = baseFireBookWaitTime + Random.Range(minFireBookRateTime, maxFireBookRateTime);
 
             Instantiate(Books, transform.position, Quaternion.identity);
-            enemyManager.totalScore+=5;
+            enemyManager.totalScore += 5;
 
         }
 
@@ -161,7 +161,7 @@ public class Enemy : MonoBehaviour
     //if the enemy ever collides with the player they both will be destroyed
     void OnTriggerEnter2D(Collider2D col)
     {
-        if(col.gameObject.tag == "Player")
+        if (col.gameObject.tag == "Player")
         {
             SoundManager.Instance.PlayOneShot(SoundManager.Instance.enemyDies);
 
