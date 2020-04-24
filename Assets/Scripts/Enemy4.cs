@@ -1,13 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
-public class Enemy2 : MonoBehaviour
+public class Enemy4 : MonoBehaviour
 {
     //base speed for enemy
-    public float speed = 16;
+    public float speed = 10;
 
     public Rigidbody2D rigidBody;
 
@@ -15,22 +15,22 @@ public class Enemy2 : MonoBehaviour
     public GameObject enemyBullet;
     public GameObject Books;
     private int hit = 0;
-    //public GameObject instantiatingPoint;
+
     //min, max, base firing rate time for bullets
     public float minFireRateTime = 1.0f;
-    public float maxFireRateTime = 4.0f;
-    public float baseFireWaitTime = 1.0f;
+    public float maxFireRateTime = 3.0f;
+    public float baseFireWaitTime = 2.0f;
 
-    public float minFireBookRateTime = 3.0f;
-    public float maxFireBookRateTime = 12.0f;
-    public float baseFireBookWaitTime;
+    public float minFireBookRateTime = 2.0f;
+    public float maxFireBookRateTime = 10.0f;
+    public float baseFireBookWaitTime = 6.0f;
 
 
     private float instantiateTime = 0.0f;
 
     public static System.Random rand = new System.Random();
 
-    public EnemyManager2 enemyManager2;
+    public EnemyManager4 enemyManager;
 
     // Start is called before the first frame update
     void Start()
@@ -50,7 +50,7 @@ public class Enemy2 : MonoBehaviour
 
         //random fire wait time for each enemy
         baseFireWaitTime = baseFireWaitTime + Random.Range(minFireRateTime, maxFireRateTime);
-        baseFireBookWaitTime = Random.Range(minFireBookRateTime, maxFireBookRateTime);
+        baseFireBookWaitTime = baseFireBookWaitTime + Random.Range(minFireBookRateTime, maxFireBookRateTime);
 
     }
 
@@ -68,7 +68,7 @@ public class Enemy2 : MonoBehaviour
 
         if (score < 0)
         {
-            SceneManager.LoadScene(10);
+            SceneManager.LoadScene(7);
         }
 
     }
@@ -103,19 +103,17 @@ public class Enemy2 : MonoBehaviour
             Turn(1);
             MoveDown();
         }
+
         if (col.gameObject.name == "BottomWall")
         {
-            //Turn(1);
-            //MoveDown();
-            enemyManager2.totalEnemiesKilled++;
-            enemyManager2.SetTimer(9.0f);
+            enemyManager.totalEnemiesKilled++;
+            enemyManager.SetTimer(9.0f);
             Destroy(gameObject);
-            if (enemyManager2.totalEnemiesKilled == 10)
+            if (enemyManager.totalEnemiesKilled == 10)
             {
-                enemyManager2.nextLevel();
+                enemyManager.nextLevel();
             }
         }
-
 
     }
 
@@ -123,14 +121,14 @@ public class Enemy2 : MonoBehaviour
     {
         //destroy bullet
         hit++;
-        if (hit == 6)
+        if (hit == 3)
         {
-            enemyManager2.totalEnemiesKilled++;
-            enemyManager2.SetTimer(9.0f);
+            enemyManager.totalEnemiesKilled++;
+            enemyManager.SetTimer(9.0f);
             Destroy(gameObject);
-            if (enemyManager2.totalEnemiesKilled == 10)
+            if (enemyManager.totalEnemiesKilled == 10)
             {
-                enemyManager2.nextLevel();
+                enemyManager.nextLevel();
             }
         }
     }
@@ -151,7 +149,7 @@ public class Enemy2 : MonoBehaviour
             baseFireBookWaitTime = baseFireBookWaitTime + Random.Range(minFireBookRateTime, maxFireBookRateTime);
 
             Instantiate(Books, transform.position, Quaternion.identity);
-            enemyManager2.totalScore+=5;
+            enemyManager.totalScore+=5;
 
         }
 

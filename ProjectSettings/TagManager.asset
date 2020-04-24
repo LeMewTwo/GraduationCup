@@ -10,7 +10,7 @@ TagManager:
   - Enemy
   - Books
   - Enemy2
-  - Enemy3
+  - Enemy4
   layers:
   - Default
   - TransparentFX
@@ -27,8 +27,8 @@ TagManager:
   - EnemyBullet
   - Books
   - Enemy2
-  - Enemy3
   - 
+  - Enemy4
   - 
   - 
   - 

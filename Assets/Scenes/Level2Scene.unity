@@ -377,11 +377,10 @@ MonoBehaviour:
   - {fileID: 3553779815013935788, guid: 10362c5f1a743df48832141ff69ef1a2, type: 3}
   - {fileID: 3553779815013935788, guid: 81e4336020f949a499c246421bc70626, type: 3}
   - {fileID: 3553779815013935788, guid: 4682ad12303fdb84395c7f1a70e55c89, type: 3}
-  totalEnemies: 9
+  totalEnemies: 10
   totalEnemiesKilled: 0
   timer: 0
   totalScore: 0
-  percentage: 0
   GPA: 0
 --- !u!1 &235006498
 GameObject:
@@ -2823,6 +2822,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4889622237500908644, guid: 2218e9c95bc764d41837e2dfa2112b38,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5220410299797153388, guid: 2218e9c95bc764d41837e2dfa2112b38,
         type: 3}
