@@ -20,6 +20,7 @@ public class EnemyManager : MonoBehaviour
 
     public float GPA;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -97,7 +98,7 @@ public class EnemyManager : MonoBehaviour
         GPA = (float)Math.Round(GPA * 100f) / 100f;
         Debug.Log(GPA);
 
-        if(GPA>=2)
+        if(GPA >= 2.0)
         {
             SceneManager.LoadScene(6);
         }

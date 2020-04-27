@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class Enemy4 : MonoBehaviour
 {
     //base speed for enemy
-    public float speed = 10;
+    public float speed = 16;
 
     public Rigidbody2D rigidBody;
 
@@ -68,7 +68,7 @@ public class Enemy4 : MonoBehaviour
 
         if (score < 0)
         {
-            SceneManager.LoadScene(7);
+            SceneManager.LoadScene(16);
         }
 
     }
@@ -109,7 +109,7 @@ public class Enemy4 : MonoBehaviour
             enemyManager.totalEnemiesKilled++;
             enemyManager.SetTimer(9.0f);
             Destroy(gameObject);
-            if (enemyManager.totalEnemiesKilled == 10)
+            if (enemyManager.totalEnemiesKilled == 15)
             {
                 enemyManager.nextLevel();
             }
@@ -121,12 +121,12 @@ public class Enemy4 : MonoBehaviour
     {
         //destroy bullet
         hit++;
-        if (hit == 3)
+        if (hit == 6)
         {
             enemyManager.totalEnemiesKilled++;
             enemyManager.SetTimer(9.0f);
             Destroy(gameObject);
-            if (enemyManager.totalEnemiesKilled == 10)
+            if (enemyManager.totalEnemiesKilled == 15)
             {
                 enemyManager.nextLevel();
             }

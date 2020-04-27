@@ -41,4 +41,22 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LessGPA2.unity
     guid: 92bd25c079b439f45ad497eae7a41a61
+  - enabled: 1
+    path: Assets/Scenes/Next_Level3.unity
+    guid: 69ea4bb0a36654743b654f4c49dd7269
+  - enabled: 1
+    path: Assets/Scenes/PlayerDied3.unity
+    guid: 880504611b4859647a0c58c7bb6a275f
+  - enabled: 1
+    path: Assets/Scenes/LessGPA3.unity
+    guid: 04a5f711fce82024c9be25df9c00a263
+  - enabled: 1
+    path: Assets/Scenes/Next_Level4.unity
+    guid: a76fbc73ed519a14fa31197a24a3a1b5
+  - enabled: 1
+    path: Assets/Scenes/PlayerDied4.unity
+    guid: e3d60eadc1e29d344a68c4cf7f6deb5d
+  - enabled: 1
+    path: Assets/Scenes/LessGPA4.unity
+    guid: 1de1932a898dd8a4885bb10b879aeeb2
   m_configObjects: {}

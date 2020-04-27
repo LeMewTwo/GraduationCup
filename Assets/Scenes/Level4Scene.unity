@@ -366,6 +366,11 @@ MonoBehaviour:
   - {fileID: 4480162827474591665, guid: 59ce5ec26a397624cbc840f5b82dbd8b, type: 3}
   - {fileID: 2384494654781577538, guid: 46c8c9139b61349478dbc09ffd48e1f2, type: 3}
   - {fileID: 5567067384894322668, guid: 30db3f09587af59449809abeaa49774e, type: 3}
+  - {fileID: 1856519954532860791, guid: 6ad70b9e9d6af6c45b6cab036aa8e413, type: 3}
+  - {fileID: 1856519954532860791, guid: 6ad70b9e9d6af6c45b6cab036aa8e413, type: 3}
+  - {fileID: 1856519954532860791, guid: 6ad70b9e9d6af6c45b6cab036aa8e413, type: 3}
+  - {fileID: 1856519954532860791, guid: 6ad70b9e9d6af6c45b6cab036aa8e413, type: 3}
+  - {fileID: 1856519954532860791, guid: 6ad70b9e9d6af6c45b6cab036aa8e413, type: 3}
   instantiatingPoint:
   - {fileID: 3553779815013935788, guid: 2e2e06636a941f9458d3a4ca5fd87f09, type: 3}
   - {fileID: 3553779815013935788, guid: d93c3f2b7286eb04f8b4378d6be5cfe0, type: 3}
@@ -377,7 +382,12 @@ MonoBehaviour:
   - {fileID: 3553779815013935788, guid: 6b7ef97789923ee4e981982b656f524a, type: 3}
   - {fileID: 3553779815013935788, guid: 2e7ab05152e4bc74396ce9576ac9b58a, type: 3}
   - {fileID: 3553779815013935788, guid: cd71c607d75198a45831ddef0fbd23ef, type: 3}
-  totalEnemies: 10
+  - {fileID: 3553779815013935788, guid: afa4f23c53a189048a7990f89ff4dbae, type: 3}
+  - {fileID: 3553779815013935788, guid: afa4f23c53a189048a7990f89ff4dbae, type: 3}
+  - {fileID: 3553779815013935788, guid: afa4f23c53a189048a7990f89ff4dbae, type: 3}
+  - {fileID: 3553779815013935788, guid: afa4f23c53a189048a7990f89ff4dbae, type: 3}
+  - {fileID: 3553779815013935788, guid: afa4f23c53a189048a7990f89ff4dbae, type: 3}
+  totalEnemies: 15
   totalEnemiesKilled: 0
   timer: 0
   totalScore: 0

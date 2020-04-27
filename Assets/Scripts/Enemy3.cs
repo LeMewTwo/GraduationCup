@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class Enemy3 : MonoBehaviour
 {
     //base speed for enemy
-    public float speed = 16;
+    public float speed = 20;
 
     public Rigidbody2D rigidBody;
 
@@ -21,7 +21,7 @@ public class Enemy3 : MonoBehaviour
     public float maxFireRateTime = 4.0f;
     public float baseFireWaitTime = 1.0f;
 
-    public float minFireBookRateTime = 3.0f;
+    public float minFireBookRateTime = 2.0f;
     public float maxFireBookRateTime = 12.0f;
     public float baseFireBookWaitTime;
 
@@ -68,7 +68,7 @@ public class Enemy3 : MonoBehaviour
 
         if (score < 0)
         {
-            SceneManager.LoadScene(10);
+            SceneManager.LoadScene(13);
         }
 
     }
@@ -108,7 +108,7 @@ public class Enemy3 : MonoBehaviour
             //Turn(1);
             //MoveDown();
             enemyManager.totalEnemiesKilled++;
-            enemyManager.SetTimer(9.0f);
+            enemyManager.SetTimer(7.0f);
             Destroy(gameObject);
             if (enemyManager.totalEnemiesKilled == 10)
             {
@@ -126,7 +126,7 @@ public class Enemy3 : MonoBehaviour
         if (hit == 6)
         {
             enemyManager.totalEnemiesKilled++;
-            enemyManager.SetTimer(9.0f);
+            enemyManager.SetTimer(7.0f);
             Destroy(gameObject);
             if (enemyManager.totalEnemiesKilled == 10)
             {

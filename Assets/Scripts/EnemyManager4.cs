@@ -11,14 +11,16 @@ public class EnemyManager4 : MonoBehaviour
     public GameObject[] instantiatingPoint;
 
     private int totalEnemiesSpawned = 0;
-    public int totalEnemies = 10;
+    public int totalEnemies = 15;
     public int totalEnemiesKilled = 0;
 
     public float timer = 0.0f;
+    public float timeout = 0.0f;
 
     public int totalScore = 0;
 
     public float GPA;
+    public TimeScript timescript;
 
     // Start is called before the first frame update
     void Start()
@@ -40,9 +42,16 @@ public class EnemyManager4 : MonoBehaviour
         }
         
         timer += Time.deltaTime;
-        if(timer > 10.0f)
+        timeout += Time.deltaTime;
+        if (timer > 10.0f)
         {
             Spawn();
+        }
+
+        if(timeout > 59.9f)
+        {
+            nextLevel();
+            return;
         }
         
     }
@@ -69,8 +78,13 @@ public class EnemyManager4 : MonoBehaviour
         {
             return;
         }
+        if (timeout>59.9f)
+        {
+            nextLevel();
+            return;
+        }
 
-        
+
         //spawn an enemy
         GameObject enemy4 = Instantiate(
             enemies[totalEnemiesSpawned],
@@ -78,7 +92,7 @@ public class EnemyManager4 : MonoBehaviour
             Quaternion.identity
         );
         //calculate total score 
-        totalScore += 15;
+        totalScore += 30;
         enemy4.GetComponent<Enemy4>().enemyManager = this;
         totalEnemiesSpawned++;
     }
@@ -99,11 +113,11 @@ public class EnemyManager4 : MonoBehaviour
 
         if(GPA>=2)
         {
-            SceneManager.LoadScene(6);
+            SceneManager.LoadScene(15);
         }
         else
         {
-            SceneManager.LoadScene(8);
+            SceneManager.LoadScene(17);
         }
     }
 }
