@@ -20,6 +20,7 @@ public class EnemyManager3 : MonoBehaviour
 
     public double GPA;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -40,7 +41,7 @@ public class EnemyManager3 : MonoBehaviour
         }
         
         timer += Time.deltaTime;
-        if(timer > 10.0f)
+        if(timer > 8.0f)  //10.0 in other levels
         {
             Spawn();
         }
@@ -93,17 +94,17 @@ public class EnemyManager3 : MonoBehaviour
         int score = int.Parse(scoreTextComp.text);
 
         //calculate GPA
-        GPA = ((score*1.0f) / totalScore) * 100.0f;
+        GPA = ((score*1.0f) / totalScore) * 4.0f;
         GPA = (float)Math.Round(GPA * 100f) / 100f;
         Debug.Log(GPA);
 
         if(GPA>=2)
         {
-            SceneManager.LoadScene(9);
+            SceneManager.LoadScene(12);
         }
         else
         {
-            SceneManager.LoadScene(11);
+            SceneManager.LoadScene(14);
         }
     }
 }

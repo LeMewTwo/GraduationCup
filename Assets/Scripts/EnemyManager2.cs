@@ -93,7 +93,7 @@ public class EnemyManager2 : MonoBehaviour
         int score = int.Parse(scoreTextComp.text);
 
         //calculate GPA
-        GPA = ((score*1.0f) / totalScore) * 100.0f;
+        GPA = ((score*1.0f) / totalScore) * 4.0f;
         GPA = (float)Math.Round(GPA * 100f) / 100f;
         Debug.Log(GPA);
 

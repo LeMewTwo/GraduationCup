@@ -5,13 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class Next_level2 : MonoBehaviour
 {
-    // Update is called once per frame
-    void Update()
-    {
-        //will go to next level when space is pressed
-        if (Input.GetButtonDown("Jump"))
+        public void nextlevel()
         {
             SceneManager.LoadScene(4);
         }
-    }
+ 
 }

@@ -54,6 +54,32 @@ public class Bullet : MonoBehaviour
 
         }
 
+        //if bullet hits enemy of level 3, then increase score and destroy bullet and enemy
+        if (col.tag == "Enemy3")
+        {
+            SoundManager.Instance.PlayOneShot(SoundManager.Instance.enemyDies);
+
+            IncreaseScoreText();
+
+            Destroy(gameObject);
+
+            col.gameObject.GetComponent<Enemy3>().Die();
+
+        }
+
+        //if bullet hits enemy of level 4, then increase score and destroy bullet and enemy
+        if (col.tag == "Enemy4")
+        {
+            SoundManager.Instance.PlayOneShot(SoundManager.Instance.enemyDies);
+
+            IncreaseScoreText();
+
+            Destroy(gameObject);
+
+            col.gameObject.GetComponent<Enemy4>().Die();
+
+        }
+
         if (col.tag == "Books")
         {
             SoundManager.Instance.PlayOneShot(SoundManager.Instance.enemyDies);

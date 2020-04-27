@@ -3,21 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PlayerDied : MonoBehaviour
+public class LessGPA4 : MonoBehaviour
 {
-
-    //loads Game screen when play Again button is pressed
+    //if pressed playAgain button, go to Level 1 again
     public void PlayAgain()
     {
-
-        SceneManager.LoadScene(2);
-
+        SceneManager.LoadScene(5);
     }
 
-    //loads MainMenu when Main Menu button is pressed
+    //if Main Menu button pressed, go to Menu
     public void GoMenu()
     {
         SceneManager.LoadScene(0);
     }
-
 }

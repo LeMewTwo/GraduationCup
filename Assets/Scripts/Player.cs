@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
 {
     //base bullet speed
     public float speed = 30;
+ 
 
     //reference to the bullet object that player will shoot
     public GameObject theBullet;
