@@ -111,7 +111,7 @@ MonoBehaviour:
   baseFireWaitTime: 1
   minFireBookRateTime: 3
   maxFireBookRateTime: 12
-  baseFireBookWaitTime: 0
+  baseFireBookWaitTime: 4
   enemyManager: {fileID: 0}
 --- !u!50 &4869828687673536703
 Rigidbody2D:
