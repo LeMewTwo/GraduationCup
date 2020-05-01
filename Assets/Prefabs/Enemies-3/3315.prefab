@@ -132,7 +132,7 @@ MonoBehaviour:
   baseFireWaitTime: 1
   minFireBookRateTime: 3
   maxFireBookRateTime: 12
-  baseFireBookWaitTime: 0
+  baseFireBookWaitTime: 4
   enemyManager: {fileID: 0}
 --- !u!61 &5389222244115426925
 BoxCollider2D:

@@ -5,7 +5,7 @@ using UnityEngine.Audio;
 
 public class Volume : MonoBehaviour
 {
-    //Reference to Audio Scource component
+   //Reference to Audio Scource component
     private AudioSource audioSrc;
 
     //Music volume variable that will be modified by dragging
@@ -33,6 +33,23 @@ public class Volume : MonoBehaviour
         musicVolume = vol;
     }
 
+    private void Awake()
+    {
+        audioSrc = GetComponent<AudioSource>();
+    }
 
+    public void PlayMusic()
+    {
+        if(audioSrc.isPlaying)
+        {
+            return;
+        }
+        audioSrc.Play();
+    }
+
+    public void StopMusic()
+    {
+        audioSrc.Stop();
+    }
 
 }

@@ -129,7 +129,7 @@ MonoBehaviour:
   Books: {fileID: 2328350597741843668, guid: dc8417103bc898542a0673678bfa3569, type: 3}
   minFireRateTime: 1
   maxFireRateTime: 4
-  baseFireWaitTime: 1
+  baseFireWaitTime: 3
   minFireBookRateTime: 3
   maxFireBookRateTime: 12
   baseFireBookWaitTime: 0
