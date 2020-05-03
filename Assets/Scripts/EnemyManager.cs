@@ -92,6 +92,7 @@ public class EnemyManager : MonoBehaviour
 
         //get string store in the text and covert into a int
         int score = int.Parse(scoreTextComp.text);
+        PlayerPrefs.SetInt("Highscore", score);
 
         //calculate GPA
         GPA = ((score*1.0f) / totalScore) * 4.0f;

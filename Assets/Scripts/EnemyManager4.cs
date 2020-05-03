@@ -106,6 +106,9 @@ public class EnemyManager4 : MonoBehaviour
         //get string store in the text and covert into a int
         int score = int.Parse(scoreTextComp.text);
 
+        int curr_highscore = PlayerPrefs.GetInt("Highscore");
+        PlayerPrefs.SetInt("Highscore", score + curr_highscore);
+
         //calculate GPA
         GPA = ((score*1.0f) / totalScore) * 4.0f;
         GPA = (float)Math.Round(GPA * 100f) / 100f;

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Bullet : MonoBehaviour
 {
@@ -110,6 +111,8 @@ public class Bullet : MonoBehaviour
         int score = int.Parse(scoreTextComp.text);
 
         score += 5;
+
+        //PlayerPrefs.SetInt("Highscore", PlayerPrefs.GetInt("highscore") + 5);
 
         //gamemanager.score += 5;
 
