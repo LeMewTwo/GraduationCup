@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5866721156629666864}
   - component: {fileID: 5297023353364784563}
-  - component: {fileID: 7790639235627233435}
   - component: {fileID: 4545937594428402946}
+  - component: {fileID: 7790639235627233435}
   - component: {fileID: 5389222244115426925}
   m_Layer: 15
   m_Name: 3315
@@ -89,6 +89,30 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &4545937594428402946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1994449033918840855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 881171921e1705a4cbe2c37d33a3efe9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 20
+  rigidBody: {fileID: 0}
+  enemyBullet: {fileID: 3615684518739039859, guid: b293f6c6bd5db4d1bb39408ce726cac1,
+    type: 3}
+  Books: {fileID: 2328350597741843668, guid: dc8417103bc898542a0673678bfa3569, type: 3}
+  minFireRateTime: 1
+  maxFireRateTime: 4
+  baseFireWaitTime: 1
+  minFireBookRateTime: 3
+  maxFireBookRateTime: 12
+  baseFireBookWaitTime: 4
+  enemyManager: {fileID: 0}
 --- !u!50 &7790639235627233435
 Rigidbody2D:
   serializedVersion: 4
@@ -110,30 +134,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!114 &4545937594428402946
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1994449033918840855}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 881171921e1705a4cbe2c37d33a3efe9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
-  rigidBody: {fileID: 0}
-  enemyBullet: {fileID: 3615684518739039859, guid: b293f6c6bd5db4d1bb39408ce726cac1,
-    type: 3}
-  Books: {fileID: 2328350597741843668, guid: dc8417103bc898542a0673678bfa3569, type: 3}
-  minFireRateTime: 1
-  maxFireRateTime: 4
-  baseFireWaitTime: 1
-  minFireBookRateTime: 3
-  maxFireBookRateTime: 12
-  baseFireBookWaitTime: 4
-  enemyManager: {fileID: 0}
 --- !u!61 &5389222244115426925
 BoxCollider2D:
   m_ObjectHideFlags: 0

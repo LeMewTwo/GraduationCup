@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 51434840050083677}
   - component: {fileID: 5375683224140559621}
+  - component: {fileID: 4494054364792952129}
   - component: {fileID: 7966986899851879573}
   - component: {fileID: 6581646015359114369}
-  - component: {fileID: 4494054364792952129}
   m_Layer: 15
   m_Name: 4314
   m_TagString: Enemy3
@@ -89,6 +89,30 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &4494054364792952129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7452745308405574731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 881171921e1705a4cbe2c37d33a3efe9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  rigidBody: {fileID: 0}
+  enemyBullet: {fileID: 3615684518739039859, guid: b293f6c6bd5db4d1bb39408ce726cac1,
+    type: 3}
+  Books: {fileID: 2328350597741843668, guid: dc8417103bc898542a0673678bfa3569, type: 3}
+  minFireRateTime: 1
+  maxFireRateTime: 4
+  baseFireWaitTime: 1
+  minFireBookRateTime: 3
+  maxFireBookRateTime: 12
+  baseFireBookWaitTime: 2
+  enemyManager: {fileID: 0}
 --- !u!50 &7966986899851879573
 Rigidbody2D:
   serializedVersion: 4
@@ -136,27 +160,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 7.7994537, y: 3.1060123}
   m_EdgeRadius: 0
---- !u!114 &4494054364792952129
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7452745308405574731}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 881171921e1705a4cbe2c37d33a3efe9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
-  rigidBody: {fileID: 0}
-  enemyBullet: {fileID: 3615684518739039859, guid: b293f6c6bd5db4d1bb39408ce726cac1,
-    type: 3}
-  Books: {fileID: 2328350597741843668, guid: dc8417103bc898542a0673678bfa3569, type: 3}
-  minFireRateTime: 1
-  maxFireRateTime: 4
-  baseFireWaitTime: 1
-  minFireBookRateTime: 3
-  maxFireBookRateTime: 12
-  baseFireBookWaitTime: 2
-  enemyManager: {fileID: 0}

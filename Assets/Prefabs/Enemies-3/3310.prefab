@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8020684207537656761}
   - component: {fileID: 4434747934251097465}
-  - component: {fileID: 9079133495358379687}
   - component: {fileID: 1633230619533652714}
-  - component: {fileID: 3880123427234552104}
+  - component: {fileID: 7344454166620420008}
+  - component: {fileID: 3026853184579983847}
   m_Layer: 15
   m_Name: 3310
   m_TagString: Enemy3
@@ -89,7 +89,31 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &9079133495358379687
+--- !u!114 &1633230619533652714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6877903498531907886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 881171921e1705a4cbe2c37d33a3efe9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 14
+  rigidBody: {fileID: 0}
+  enemyBullet: {fileID: 3615684518739039859, guid: b293f6c6bd5db4d1bb39408ce726cac1,
+    type: 3}
+  Books: {fileID: 2328350597741843668, guid: dc8417103bc898542a0673678bfa3569, type: 3}
+  minFireRateTime: 1
+  maxFireRateTime: 4
+  baseFireWaitTime: 3
+  minFireBookRateTime: 3
+  maxFireBookRateTime: 12
+  baseFireBookWaitTime: 0
+  enemyManager: {fileID: 0}
+--- !u!50 &7344454166620420008
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -104,37 +128,13 @@ Rigidbody2D:
   m_Mass: 0.0001
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0.009
+  m_GravityScale: 0.09
   m_Material: {fileID: 0}
   m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!114 &1633230619533652714
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6877903498531907886}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 881171921e1705a4cbe2c37d33a3efe9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
-  rigidBody: {fileID: 0}
-  enemyBullet: {fileID: 3615684518739039859, guid: b293f6c6bd5db4d1bb39408ce726cac1,
-    type: 3}
-  Books: {fileID: 2328350597741843668, guid: dc8417103bc898542a0673678bfa3569, type: 3}
-  minFireRateTime: 1
-  maxFireRateTime: 4
-  baseFireWaitTime: 3
-  minFireBookRateTime: 3
-  maxFireBookRateTime: 12
-  baseFireBookWaitTime: 0
-  enemyManager: {fileID: 0}
---- !u!61 &3880123427234552104
+--- !u!61 &3026853184579983847
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -147,7 +147,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.017222404}
+  m_Offset: {x: 0, y: 0.000000059604645}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -158,5 +158,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 7.9, y: 3.1366673}
+  m_Size: {x: 7.9, y: 3.2400002}
   m_EdgeRadius: 0

@@ -15,17 +15,17 @@ public class HighScoreTable : MonoBehaviour
         Name[0].text = PlayerPrefs.GetString("name1", "Nishma");
         int score1 = PlayerPrefs.GetInt("score1", 0);
         Gpa[0].text = score1.ToString();
-        Level[0].text = PlayerPrefs.GetString("level1", "Freshmen");
+        //Level[0].text = PlayerPrefs.GetString("level1", "Freshmen");
 
         Name[1].text = PlayerPrefs.GetString("name2", "Chris");
         int score2 = PlayerPrefs.GetInt("score2", 0);
         Gpa[1].text = score2.ToString();
-        Level[1].text = PlayerPrefs.GetString("level2", "Freshmen");
+        //Level[1].text = PlayerPrefs.GetString("level2", "Freshmen");
 
         Name[2].text = PlayerPrefs.GetString("name3", "Sushmita");
         int score3 = PlayerPrefs.GetInt("score3", 0);
         Gpa[2].text = score3.ToString();
-        Level[2].text = PlayerPrefs.GetString("level3", "Sophomore");
+        //Level[2].text = PlayerPrefs.GetString("level3", "Sophomore");
         /*
         Name[3].text = PlayerPrefs.GetString("name4", "Ishmeet");
         Gpa[3].text = PlayerPrefs.GetString("gpa4", "4");
