@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5591090b9c67d5489d02624c01c8cb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 16
   rigidBody: {fileID: 0}
   enemyBullet: {fileID: 3615684518739039859, guid: b293f6c6bd5db4d1bb39408ce726cac1,
     type: 3}
@@ -128,7 +128,7 @@ Rigidbody2D:
   m_Mass: 0.0001
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0
+  m_GravityScale: 0.005
   m_Material: {fileID: 0}
   m_Interpolate: 1
   m_SleepingMode: 1
